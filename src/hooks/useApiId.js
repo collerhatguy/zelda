@@ -1,11 +1,11 @@
 import {useState, useEffect} from "react";
 
-export default function useAPI(query) {
-    const [data, setData] = useState([]);
+export default function useApiId(query) {
+    const [data, setData] = useState();
     const getRequest = async () => {
         try {
             const response = await fetch(
-                `https://the-legend-of-zelda.p.rapidapi.com/${query}`, 
+                query, 
                 {
                     "method": "GET",
                     "headers": {
