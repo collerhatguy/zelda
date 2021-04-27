@@ -8,12 +8,14 @@ function App() {
   const queries = ["items", "places", "dungeons", "bosses", "monsters", "characters", "games"];
   return (
     <div className="App">
-      <header>
-        <nav>
-
-        </nav>
-      </header>
       <Router>
+        <header>
+          <nav>
+            {queries.map(query => {
+              return <Link to={`/${query}`}>{query}</Link>
+            })}
+          </nav>
+        </header>
         <Switch>
           {queries.map(query => {
             return <Route path={`/${query}`} component={[`PageFor${query}`]} />
