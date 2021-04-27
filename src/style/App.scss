@@ -22,12 +22,17 @@ $third-color-100: hsl(120, 100%, 25%);
 $third-color-200: hsl(120, 100%, 45%);
 $third-color-300: hsl(120, 100%, 65%);
 $third-color-400: hsl(120, 100%, 85%);
+$base-font-size: 10px;
+$golden-ratio: 1.618;
 
 // 2. mixins
 
 @mixin padding {
     padding: .2em;
     margin: .2em;
+}
+@mixin font-size($num) {
+    font-size: $num * $base-font-size * $golden-ratio;
 }
 // 3. ids
 // 4. classes
@@ -42,5 +47,26 @@ $third-color-400: hsl(120, 100%, 85%);
     }
 }
 // 5. tags
+nav {
+    max-width: 100vw;
+    height: fit-content;
+    background-color: $second-color;
+    color: $prime-color;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    a {
+        @include font-size(2);
+        @include padding();
+        background-color: $prime-color;
+        color: $second-color;
+        transition-duration: 300ms;
+        text-decoration: none;
+        &:hover {
+            background-color: $second-color;
+            color: $prime-color;
+        }
+    }
+}
 // 6. animation
 // 7. media queries
