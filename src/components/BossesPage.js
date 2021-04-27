@@ -6,7 +6,7 @@ export default function BossesPage() {
     return (
         <div>
             {data.map(boss => {
-                return <div className="boss-card card">
+                return <div className="boss-card card" key={boss._id}>
                             <div>
                                 <h2>Name: <span>{boss.name}</span></h2>
                             </div>
