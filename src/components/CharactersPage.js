@@ -6,12 +6,12 @@ export default function CharactersPage() {
     return (
         <div>
             {data.map(character => {
-                return <div>
+                return <div className="character-card card">
                             <div>
-                                {character.name}
+                                <h2>Name: <span>{character.name}</span></h2>
                             </div>
                             <div>
-                                {character.description}
+                                <h2>Description: <span>{character.description}</span></h2>
                             </div>
                         </div>
             })}

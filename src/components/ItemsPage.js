@@ -6,12 +6,12 @@ export default function ItemsPage() {
     return (
         <div>
             {data.map(item => {
-                return <div>
+                return <div className="item-card card">
                             <div>
-                                {item.name}
+                                <h2>Name: <span>{item.name}</span></h2>
                             </div>
                             <div>
-                                {item.description}
+                                <h2>Description: <span>{item.description}</span></h2>
                             </div>
                         </div>
             })}

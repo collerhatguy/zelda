@@ -7,5 +7,13 @@
 .card {
   padding: .2em;
   margin: .2em;
+  border: solid .2em black;
+  background-color: green;
+  color: #b3ffb3;
+  font-weight: 900;
+}
+
+.card span {
+  font-weight: 100;
 }
 /*# sourceMappingURL=App.css.map */

@@ -6,7 +6,7 @@ export default function MonstersPage() {
     return (
         <div>
             {data.map(monster => {
-                return <div className="monster-card">
+                return <div className="monster-card card">
                             <div>
                                 <h2>Name: <span>{monster.name}</span></h2>
                             </div>
