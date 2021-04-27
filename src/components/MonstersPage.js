@@ -5,16 +5,17 @@ export default function MonstersPage() {
     const data = useAPI("monsters");
     return (
         <div>
+            <h2>Zelda Monsters</h2>
             {data.map(monster => {
                 return <div className="monster-card card">
                             <div>
-                                <h2>Name: <span>{monster.name}</span></h2>
+                                <h3>Name: <span>{monster.name}</span></h3>
                             </div>
                             <div>
-                                <h2>Description: <span>{monster.description}</span></h2>
+                                <h3>Description: <span>{monster.description}</span></h3>
                             </div>
                             <div>
-                                <h2>Appearance: <span>{monster.appearances.length}</span></h2>
+                                <h3>Appearance: <span>{monster.appearances.length}</span></h3>
                             </div>
                         </div>
             })}

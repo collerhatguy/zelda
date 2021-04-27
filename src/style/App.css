@@ -7,6 +7,8 @@
 .card {
   padding: .2em;
   margin: .2em;
+  width: 90vw;
+  margin: .2em auto;
   border: solid .2em black;
   background-color: green;
   color: #b3ffb3;
@@ -49,5 +51,23 @@ nav a {
 nav a:hover {
   background-color: white;
   color: black;
+}
+
+h2 {
+  padding: .2em;
+  margin: .2em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: .2em auto;
+  color: #ffff99;
+  background-color: #666600;
+}
+
+@media only screen and (max-width: 810px) {
+  nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=App.css.map */

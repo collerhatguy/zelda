@@ -5,13 +5,14 @@ export default function DungeonsPage() {
     const data = useAPI("dungeons");
     return (
         <div>
+            <h2>Zelda Dungeons</h2>
             {data.map(dungeon => {
                 return <div className="dungeon-card card">
                             <div>
-                                <h2>Name: <span>{dungeon.name}</span></h2>
+                                <h3>Name: <span>{dungeon.name}</span></h3>
                             </div>
                             <div>
-                                <h2>Description: <span>{dungeon.description}</span></h2>
+                                <h3>Description: <span>{dungeon.description}</span></h3>
                             </div>
                         </div>
             })}

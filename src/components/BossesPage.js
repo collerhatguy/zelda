@@ -5,13 +5,14 @@ export default function BossesPage() {
     const data = useAPI("bosses")
     return (
         <div>
+            <h2>Zelda Bosses</h2>
             {data.map(boss => {
                 return <div className="boss-card card" key={boss._id}>
                             <div>
-                                <h2>Name: <span>{boss.name}</span></h2>
+                                <h3>Name: <span>{boss.name}</span></h3>
                             </div>
                             <div>
-                                <h2>Description: <span>{boss.description}</span></h2>
+                                <h3>Description: <span>{boss.description}</span></h3>
                             </div>
                         </div>
             })}

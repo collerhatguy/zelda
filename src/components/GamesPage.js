@@ -5,22 +5,23 @@ export default function GamesPage() {
     const data = useAPI("games");
     return (
         <div>
+            <h2>Zelda Games</h2>
             {data.map(game => {
                 return <div className="game-card card" key={game._id}>
                             <div>
-                                <h2>Name: <span>{game.name}</span></h2>
+                                <h3>Name: <span>{game.name}</span></h3>
                             </div>
                             <div>
-                                <h2>Published: <span>{game.released_date}</span></h2>
+                                <h3>Published: <span>{game.released_date}</span></h3>
                             </div>
                             <div>
-                                <h2>Developer: <span>{game.developer}</span></h2>
+                                <h3>Developer: <span>{game.developer}</span></h3>
                             </div>
                             <div>
-                                <h2>Publisher: <span>{game.publisher}</span></h2>
+                                <h3>Publisher: <span>{game.publisher}</span></h3>
                             </div>
                             <div>
-                                <h2>Description: <span>{game.description}</span></h2>
+                                <h3>Description: <span>{game.description}</span></h3>
                             </div>
                         </div>
             })}

@@ -22,6 +22,10 @@ $third-color-100: hsl(120, 100%, 25%);
 $third-color-200: hsl(120, 100%, 45%);
 $third-color-300: hsl(120, 100%, 65%);
 $third-color-400: hsl(120, 100%, 85%);
+$fourth-color-100: hsl(60, 100%, 20%);
+$fourth-color-200: hsl(60, 100%, 40%);
+$fourth-color-300: hsl(60, 100%, 60%);
+$fourth-color-400: hsl(60, 100%, 80%);
 $base-font-size: 10px;
 $golden-ratio: 1.618;
 
@@ -38,6 +42,8 @@ $golden-ratio: 1.618;
 // 4. classes
 .card {
     @include padding();
+    width: 90vw;
+    margin: .2em auto;
     border: solid .2em black;
     background-color: $third-color-100;
     color: $third-color-400;
@@ -68,5 +74,17 @@ nav {
         }
     }
 }
+h2 {
+    @include padding();
+    width: fit-content;
+    margin: .2em auto;
+    color: $fourth-color-400;
+    background-color: $fourth-color-100;
+}
 // 6. animation
 // 7. media queries
+@media only screen and (max-width: 810px) {
+    nav {
+        flex-wrap: wrap;
+    }
+}
