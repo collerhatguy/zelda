@@ -2,10 +2,12 @@ import React from 'react'
 import useAPI from '../hooks/useAPI'
 
 export default function MonstersPage() {
-    const data = useAPI("monsters");
+    const [data, isDone] = useAPI("monsters");
+    const style = {display: isDone ? "none" : "block"};
     return (
         <div>
             <h2>Zelda Monsters</h2>
+            <div className="loader" style={style}></div>
             {data.map(monster => {
                 return <div className="monster-card card">
                             <div>

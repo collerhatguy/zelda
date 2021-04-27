@@ -2,10 +2,12 @@ import React from 'react'
 import useAPI from '../hooks/useAPI'
 
 export default function GamesPage() {
-    const data = useAPI("games");
+    const [data, isDone] = useAPI("games");
+    const style = {display: isDone ? "none" : "block"};
     return (
         <div>
             <h2>Zelda Games</h2>
+            <div className="loader" style={style}></div>
             {data.map(game => {
                 return <div className="game-card card" key={game._id}>
                             <div>
