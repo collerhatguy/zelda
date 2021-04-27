@@ -16,6 +16,7 @@ export default function useAPI(number) {
                 }
             );
             const json = await response.json();
+            console.log(json.data);
             setData(json.data);
         } catch(error) {
             console.log(error);

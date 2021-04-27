@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import useAPI from "./hooks/useAPI";
-import './App.css';
+import './style/App.css';
+import ItemsPage from "./components/ItemsPage";
 
 function App() {
   
@@ -17,9 +17,7 @@ function App() {
           </nav>
         </header>
         <Switch>
-          {queries.map(query => {
-            return <Route path={`/${query}`} component={[`PageFor${query}`]} />
-          })}
+          <Route path={`/items`} component={ItemsPage} />
         </Switch>
       </Router>
     </div>
