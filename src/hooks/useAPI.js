@@ -1,12 +1,12 @@
 import {useState, useEffect} from "react";
 
-export default function useAPI(number) {
+export default function useAPI(query) {
     const queries = ["items", "places", "dungeons", "bosses", "monsters", "characters", "games"];
     const [data, setData] = useState([]);
     const getRequest = async () => {
         try {
             const response = await fetch(
-                `https://the-legend-of-zelda.p.rapidapi.com/${queries[number]}`, 
+                `https://the-legend-of-zelda.p.rapidapi.com/${query}`, 
                 {
                     "method": "GET",
                     "headers": {
