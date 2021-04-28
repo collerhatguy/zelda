@@ -1,5 +1,6 @@
 import React from 'react'
 import useAPI from '../hooks/useAPI'
+import Game from "./Game";
 
 export default function BossesPage() {
     const [data, isDone] = useAPI("bosses");
@@ -16,6 +17,9 @@ export default function BossesPage() {
                             <div>
                                 <h3>Description: <span>{boss.description}</span></h3>
                             </div>
+                            {/* {boss.appearances?.map(gameId => {
+                                return <Game gameId={gameId} key={gameId} />
+                            })} */}
                         </div>
             })}
         </div>
