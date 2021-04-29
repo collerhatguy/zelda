@@ -8,8 +8,12 @@ export default function ItemsPage() {
         <div>
             <h2>Zelda Items</h2>
             <div className="loader" style={style}></div>
-            {data.map(item => {
-                return <div className="item-card card">
+            {data.map((item, index) => {
+                return <div className="item-card card"
+                            style={{
+                                animationDelay: `${index * 50}ms`
+                            }}
+                            key={item._id}>
                             <div>
                                 <h3>Name: <span>{item.name}</span></h3>
                             </div>

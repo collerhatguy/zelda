@@ -9,8 +9,12 @@ export default function PlacesPage() {
         <div>
             <h2>Zelda Locations</h2>
             <div className="loader" style={style}></div>
-            {data.map(place => {
-                return <div className="place-card card">
+            {data.map((place, index) => {
+                return <div className="place-card card"
+                            style={{
+                                animationDelay: `${index * 50}ms`
+                            }}
+                            key={place._id}>
                             <div>
                                 <h3>Name: <span>{place.name}</span></h3>
                             </div>

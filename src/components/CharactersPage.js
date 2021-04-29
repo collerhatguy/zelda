@@ -8,8 +8,11 @@ export default function CharactersPage() {
         <div>
             <h2>Zelda Characters</h2>
             <div className="loader" style={style}></div>
-            {data.map(character => {
-                return <div className="character-card card">
+            {data.map((character, index) => {
+                return <div className="character-card card"
+                style={{
+                    animationDelay: `${index * 50}ms`
+                }}>
                             <div>
                                 <h3>Name: <span>{character.name}</span></h3>
                             </div>

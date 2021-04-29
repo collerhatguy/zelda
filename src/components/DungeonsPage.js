@@ -8,8 +8,12 @@ export default function DungeonsPage() {
         <div>
             <h2>Zelda Dungeons</h2>
             <div className="loader" style={style}></div>
-            {data.map(dungeon => {
-                return <div className="dungeon-card card">
+            {data.map((dungeon, index) => {
+                return <div className="dungeon-card card"
+                        style={{
+                            animationDelay: `${index * 50}ms`
+                        }}
+                        key={dungeon._id}>
                             <div>
                                 <h3>Name: <span>{dungeon.name}</span></h3>
                             </div>

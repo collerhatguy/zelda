@@ -10,7 +10,13 @@ export default function BossesPage() {
             <h2>Zelda Bosses</h2>
             <div className="loader" style={style}></div>
             {data.map((boss, index) => {
-                return <div className="boss-card card" key={boss._id} data-sequence={index}>
+                return <div 
+                    className="boss-card card" 
+                    style={{
+                        animationDelay: `${index * 50}ms`
+                    }}
+                    key={boss._id} 
+                    >
                             <div>
                                 <h3>Name: <span>{boss.name}</span></h3>
                             </div>

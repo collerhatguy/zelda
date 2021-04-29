@@ -8,8 +8,12 @@ export default function GamesPage() {
         <div>
             <h2>Zelda Games</h2>
             <div className="loader" style={style}></div>
-            {data.map(game => {
-                return <div className="game-card card" key={game._id}>
+            {data.map((game, index) => {
+                return <div className="game-card card"
+                            style={{
+                                animationDelay: `${index * 50}ms`
+                            }} 
+                            key={game._id}>
                             <div>
                                 <h3>Name: <span>{game.name}</span></h3>
                             </div>

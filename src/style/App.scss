@@ -40,15 +40,16 @@ $golden-ratio: 1.618;
 }
 // 3. ids
 // 4. classes
-.card[data-sequence] {
+.card {
     @include padding();
-    animation: grow 500ms (attr(data-sequence) * 100ms) ease-in-out forwards;
+    animation: grow 500ms ease-in-out forwards;
     width: 90vw;
     margin: .2em auto;
     border: solid .2em black;
     background-color: $third-color-100;
     color: $third-color-400;
     font-weight: 900;
+    transform: scale(0);
     span {
         font-weight: 100;
     }
