@@ -7,6 +7,8 @@
 .card {
   padding: .2em;
   margin: .2em;
+  -webkit-animation: grow 300ms ease-in-out forwards;
+          animation: grow 300ms ease-in-out forwards;
   width: 90vw;
   margin: .2em auto;
   border: solid .2em black;
@@ -95,6 +97,28 @@ h2 {
   100% {
     -webkit-transform: rotateZ(360deg);
             transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 

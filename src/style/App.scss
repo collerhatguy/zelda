@@ -40,8 +40,9 @@ $golden-ratio: 1.618;
 }
 // 3. ids
 // 4. classes
-.card {
+.card[data-sequence] {
     @include padding();
+    animation: grow 500ms (attr(data-sequence) * 100ms) ease-in-out forwards;
     width: 90vw;
     margin: .2em auto;
     border: solid .2em black;
@@ -98,6 +99,10 @@ h2 {
     100% {
         transform: rotateZ(360deg);
     }
+}
+@keyframes grow {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
 }
 // 7. media queries
 @media only screen and (max-width: 810px) {
