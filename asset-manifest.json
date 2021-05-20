@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/zelda/static/css/main.9dec34e2.chunk.css",
-    "main.js": "/zelda/static/js/main.03e992b1.chunk.js",
-    "main.js.map": "/zelda/static/js/main.03e992b1.chunk.js.map",
+    "main.js": "/zelda/static/js/main.8c8f7bfe.chunk.js",
+    "main.js.map": "/zelda/static/js/main.8c8f7bfe.chunk.js.map",
     "runtime-main.js": "/zelda/static/js/runtime-main.381fd958.js",
     "runtime-main.js.map": "/zelda/static/js/runtime-main.381fd958.js.map",
     "static/js/2.cd771823.chunk.js": "/zelda/static/js/2.cd771823.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.381fd958.js",
     "static/js/2.cd771823.chunk.js",
     "static/css/main.9dec34e2.chunk.css",
-    "static/js/main.03e992b1.chunk.js"
+    "static/js/main.8c8f7bfe.chunk.js"
   ]
 }
