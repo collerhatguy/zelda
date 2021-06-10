@@ -12,6 +12,7 @@ import GamesPage from "./components/GamesPage";
 function App() {
   
   const queries = ["items", "places", "dungeons", "bosses", "monsters", "characters", "games"];
+
   return (
     <div className="App">
       <Router>
@@ -23,13 +24,17 @@ function App() {
           </nav>
         </header>
         <Switch>
-          <Route path={`/items`} component={ItemsPage} />
+          {queries.map(query => {
+            const queryUppercase = `${query.charAt(0).toUpperCase() + query.slice(1)}Page`;
+            return <Route path={`/${query}`} component={window[queryUppercase]} />
+          })}
+          {/* <Route path={`/items`} component={ItemsPage} />
           <Route path={`/places`} component={PlacesPage} />
           <Route path={`/dungeons`} component={DungeonsPage} />
           <Route path={`/bosses`} component={BossesPage} />
           <Route path={`/monsters`} component={MonstersPage} />
           <Route path={`/characters`} component={CharactersPage} />
-          <Route path={`/games`} component={GamesPage} />
+          <Route path={`/games`} component={GamesPage} /> */}
         </Switch>
       </Router>
     </div>
